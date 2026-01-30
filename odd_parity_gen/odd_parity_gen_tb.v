@@ -59,7 +59,13 @@ begin
     stimulus(0); //S0
     stimulus(1); //S01
     stimulus(1); //S11,z=0
-    #300 $finish;
+    #10;
+    stimulus(0); //S10
+    stimulus(1); //S11
+    stimulus(0); //S010,z=1
+    #10;
+    reset();
+    #100 $finish;
 end
 
 endmodule
